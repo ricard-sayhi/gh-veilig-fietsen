@@ -1,0 +1,81 @@
+<!--meta {
+  "nav": "verkoop",
+  "title": "Fiets verkopen Utrecht | Wij kopen je fiets of partij | GH Veilig Fietsen",
+  "titleEn": "Sell your bike in Utrecht | We buy bikes & bulk lots | GH Veilig Fietsen",
+  "desc": "Fiets verkopen in Utrecht? GH Veilig Fietsen koopt tweedehands fietsen en hele partijen. Stuur foto's, krijg een eerlijk bod en ontvang direct je geld."
+}-->
+<section class="page-hero page-hero--photo">
+  <img class="page-hero__bg" src="assets/img/photos/GH-branded-van-and-bikes.webp" alt="" width="1360" height="1020" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / <span data-en="Sell your bike">Verkoop je fiets</span></p>
+    <h1 data-en="We buy your bike">We kopen je fiets</h1>
+    <p class="lead" data-en="Moving out, upgrading, or one bike too many in the hallway? We buy secondhand bikes and whole lots. Fair offer, no hassle.">Verhuizen, iets nieuws, of een fiets te veel in de gang? Wij kopen tweedehands fietsen en hele partijen. Eerlijk bod, geen gedoe.</p>
+    <div class="chips">
+      <span class="chip chip--red" data-en="Fair offer">Eerlijk bod</span>
+      <span class="chip" data-en="Bulk lots welcome">Ook partijen</span>
+      <span class="chip" data-en="Paid right away">Direct betaald</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="how-sell">
+  <div class="wrap">
+    <h2 id="how-sell" class="reveal" data-en="How it works">Zo werkt het</h2>
+    <ol class="steps reveal-stagger" style="margin-top:32px">
+      <li class="reveal"><h3 data-en="Send photos">Stuur foto's</h3><p data-en="Fill in the form or WhatsApp us a few photos and the details.">Vul het formulier in of app ons een paar foto's en de gegevens.</p></li>
+      <li class="reveal"><h3 data-en="Get an offer">Krijg een bod</h3><p data-en="We reply with an honest indication, usually the same day.">We sturen een eerlijke indicatie, meestal dezelfde dag.</p></li>
+      <li class="reveal"><h3 data-en="Bring it in">Kom langs</h3><p data-en="We check the bike in the shop and confirm the price.">We bekijken de fiets in de winkel en bevestigen de prijs.</p></li>
+      <li class="reveal is-free"><h3 data-en="Get paid">Geld mee</h3><p data-en="Deal? You're paid on the spot. Bring your ID.">Akkoord? Je krijgt direct betaald. Neem je ID mee.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section grey" aria-labelledby="sell-form-title">
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Get an offer">Bod aanvragen</p>
+      <h2 id="sell-form-title" data-en="Tell us about your bike">Vertel over je fiets</h2>
+      <ul class="ticks">
+        <li data-en="Single bikes, e-bikes and kids' bikes">Losse fietsen, e-bikes en kinderfietsen</li>
+        <li data-en="Bulk lots: from student houses, companies, rental fleets">Partijen: studentenhuizen, bedrijven, verhuurvloten</li>
+        <li data-en="Not riding anymore? We'll still take a look">Rijdt hij niet meer? We kijken er toch naar</li>
+      </ul>
+      <div class="card" style="margin-top:24px">
+        <svg class="card__icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <h3 data-en="Proof of ownership">Bewijs van eigendom</h3>
+        <p data-en="We only buy bikes that are really yours. Bring your ID and, if you have it, the receipt or key. That keeps Utrecht safe for everyone.">We kopen alleen fietsen die echt van jou zijn. Neem je ID mee en, als je hebt, de bon of sleutel. Zo houden we Utrecht veilig voor iedereen.</p>
+      </div>
+    </div>
+    <form class="form-box form js-form reveal" data-subject="Fiets verkopen via website" novalidate>
+      <div class="form__row">
+        <div class="field"><label for="v-name" data-en="Name">Naam</label><input id="v-name" name="naam" data-label="Naam" autocomplete="name" required></div>
+        <div class="field"><label for="v-phone" data-en="Phone">Telefoon</label><input id="v-phone" name="telefoon" data-label="Telefoon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="v-type" data-en="Type of bike">Soort fiets</label>
+          <select id="v-type" name="soort" data-label="Soort" required><option value="" data-en="Choose…">Kies…</option><option data-en="City bike">Stadsfiets</option><option data-en="Granny/granddad bike">Oma-/opafiets</option><option data-en="Transport bike">Transportfiets</option><option>E-bike</option><option data-en="Kids' bike">Kinderfiets</option><option data-en="Bulk lot (multiple bikes)">Partij (meerdere fietsen)</option><option data-en="Other">Anders</option></select>
+        </div>
+        <div class="field"><label for="v-brand" data-en="Brand">Merk</label><input id="v-brand" name="merk" data-label="Merk" placeholder="Gazelle, Batavus, Cortina…"></div>
+      </div>
+      <fieldset class="field">
+        <legend data-en="Condition">Staat</legend>
+        <div class="checks">
+          <label class="check"><input type="radio" name="staat" data-label="Staat" value="Zo goed als nieuw" required><span data-en="Like new">Zo goed als nieuw</span></label>
+          <label class="check"><input type="radio" name="staat" value="Goed"><span data-en="Good">Goed</span></label>
+          <label class="check"><input type="radio" name="staat" value="Gebruikt"><span data-en="Used">Gebruikt</span></label>
+          <label class="check"><input type="radio" name="staat" value="Moet gemaakt worden"><span data-en="Needs work">Moet gemaakt worden</span></label>
+        </div>
+      </fieldset>
+      <div class="form__row">
+        <div class="field"><label for="v-count" data-en="How many bikes?">Hoeveel fietsen?</label><input id="v-count" name="aantal" data-label="Aantal" type="number" min="1" value="1"></div>
+        <div class="field"><label for="v-price"><span data-en="Asking price">Vraagprijs</span> <span class="opt" data-en="(optional)">(optioneel)</span></label><input id="v-price" name="vraagprijs" data-label="Vraagprijs" inputmode="decimal" placeholder="€"></div>
+      </div>
+      <div class="field">
+        <span style="display:block;font-weight:800;font-size:.92rem;margin-bottom:6px" data-en="Photos">Foto's</span>
+        <label class="file-drop"><input type="file" name="fotos" accept="image/*" multiple><svg aria-hidden="true" width="28" height="28"><use href="#i-camera"/></svg><span data-en="Add photos: whole bike, frame and any damage">Voeg foto's toe: hele fiets, frame en eventuele schade</span><small class="js-file-names"></small></label>
+      </div>
+      <button class="btn btn--red btn--block" type="submit"><svg class="wheel" aria-hidden="true"><use href="#i-wheel"/></svg><svg class="btn__icon" aria-hidden="true"><use href="#i-euro"/></svg><span data-en="Request an offer">Vraag een bod aan</span></button>
+      <div class="form-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+<!--meta {
+  "nav": "contact",
+  "title": "Contact & openingstijden | Fietsenmaker Lange Jansstraat 26 Utrecht | GH Veilig Fietsen",
+  "titleEn": "Contact & opening hours | Bike shop Lange Jansstraat 26 Utrecht | GH Veilig Fietsen",
+  "desc": "GH Veilig Fietsen, Lange Jansstraat 26, 3512 BB Utrecht. Bel 06 85775914 of app ons. Openingstijden, route vanaf Utrecht Centraal en contactformulier."
+}-->
+<section class="page-hero page-hero--photo">
+  <img class="page-hero__bg" src="assets/img/photos/front-window-view.webp" alt="" width="1360" height="1020" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+    <h1 data-en="Come by or give us a call">Kom langs of bel even</h1>
+    <p class="lead" data-en="Questions about a bike, a repair or a rental? Call, WhatsApp, or just walk in.">Vraag over een fiets, reparatie of huurfiets? Bel, app, of loop gewoon binnen.</p>
+    <p><span class="status js-status"></span></p>
+  </div>
+</section>
+
+<section class="section" aria-label="Contactgegevens" data-en-aria-label="Contact details">
+  <div class="wrap grid grid--3">
+    <div class="reveal">
+      <h2 style="font-size:2rem" data-en="Details">Gegevens</h2>
+      <ul class="info">
+        <li><svg aria-hidden="true"><use href="#i-route"/></svg><span><strong>GH Veilig Fietsen</strong>Lange Jansstraat 26<br>3512 BB Utrecht</span></li>
+        <li><svg aria-hidden="true"><use href="#i-phone"/></svg><span><strong data-en="Phone">Telefoon</strong><a href="tel:+31685775914">06 85775914</a></span></li>
+        <li><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><span><strong>WhatsApp</strong><a href="https://wa.me/31685775914" target="_blank" rel="noopener" data-en="Send a message">Stuur een bericht</a></span></li>
+        <!-- TODO: e-mail -->
+      </ul>
+      <div class="btn-row" style="margin-top:24px">
+        <a class="btn btn--red" href="tel:+31685775914"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Call">Bel</span></a>
+        <a class="btn" href="https://wa.me/31685775914" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+      </div>
+      <h3 style="margin-top:32px" data-en="We accept">Betalen</h3>
+      <ul class="pay">
+        <li><svg aria-hidden="true"><use href="#i-card"/></svg><span data-en="Debit card">Pinnen</span></li>
+        <li>Visa · Mastercard</li>
+        <li><svg aria-hidden="true"><use href="#i-nfc"/></svg>Apple Pay</li>
+        <li><svg aria-hidden="true"><use href="#i-nfc"/></svg>Google Pay</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <h2 style="font-size:2rem" data-en="Opening hours">Openingstijden</h2>
+      <table class="hours js-hours"></table>
+      <p class="small muted" style="margin-top:12px" data-en="Public holidays may differ. When in doubt, give us a call.">Op feestdagen kunnen tijden afwijken. Twijfel? Bel even.</p>
+    </div>
+    <div class="reveal">
+      <h2 style="font-size:2rem" data-en="From Centraal">Vanaf Centraal</h2>
+      <p class="muted" data-en="About 10 minutes on foot, 4 by bike.">Ongeveer 10 minuten lopen, 4 minuten fietsen.</p>
+      <ol class="route">
+        <li data-en="Leave Utrecht Centraal via the city-centre side (Vredenburg).">Verlaat Utrecht Centraal aan de centrumkant (Vredenburg).</li>
+        <li data-en="Cross Vredenburg and walk into Lange Viestraat.">Steek Vredenburg over en loop de Lange Viestraat in.</li>
+        <li data-en="Keep straight on via Potterstraat into Lange Jansstraat.">Rechtdoor via de Potterstraat de Lange Jansstraat in.</li>
+        <li data-en="Look for the lights in the window at no. 26.">Zoek de lichtjes in de etalage op nummer 26.</li>
+      </ol>
+      <a class="btn btn--ghost btn--sm" style="margin-top:16px" href="https://www.google.com/maps/dir/?api=1&amp;origin=Utrecht+Centraal&amp;destination=Lange+Jansstraat+26+Utrecht&amp;travelmode=walking" target="_blank" rel="noopener" data-en="Open walking route">Open looproute</a>
+    </div>
+  </div>
+</section>
+
+<section class="section grey" aria-labelledby="contact-form-title">
+  <div class="wrap split" style="align-items:start">
+    <div class="map reveal">
+      <div class="map__ph">
+        <img class="map__photo" src="assets/img/photos/front-window-view.webp" alt="" width="1360" height="1020" loading="lazy" decoding="async">
+        <button class="btn js-map-load" type="button"><svg class="wheel" aria-hidden="true"><use href="#i-wheel"/></svg><svg class="btn__icon" aria-hidden="true"><use href="#i-route"/></svg><span data-en="Show map">Toon kaart</span></button>
+        <p data-en="Loads Google Maps (Google may set cookies).">Laadt Google Maps (Google kan cookies plaatsen).</p>
+      </div>
+    </div>
+    <form class="form-box form js-form reveal" data-subject="Vraag via website" novalidate>
+      <div class="form-box__head">
+        <h2 id="contact-form-title" style="font-size:2.2rem;margin:0" data-en="Send a message">Stuur een bericht</h2>
+        <span class="status status--light light js-status"></span>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="c-name" data-en="Name">Naam</label><input id="c-name" name="naam" data-label="Naam" autocomplete="name" required></div>
+        <div class="field"><label for="c-phone" data-en="Phone">Telefoon</label><input id="c-phone" name="telefoon" data-label="Telefoon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="c-topic" data-en="About">Onderwerp</label>
+        <select id="c-topic" name="onderwerp" data-label="Onderwerp"><option data-en="Buying a bike">Fiets kopen</option><option data-en="Repair">Reparatie</option><option data-en="Rental">Verhuur</option><option data-en="Selling a bike">Fiets verkopen</option><option data-en="Something else">Iets anders</option></select>
+      </div>
+      <div class="field"><label for="c-msg" data-en="Message">Bericht</label><textarea id="c-msg" name="bericht" data-label="Bericht" required></textarea></div>
+      <button class="btn btn--red btn--block" type="submit"><svg class="wheel" aria-hidden="true"><use href="#i-wheel"/></svg><svg class="btn__icon" aria-hidden="true"><use href="#i-mail"/></svg><span data-en="Send">Versturen</span></button>
+      <div class="form-msg" role="status" aria-live="polite"></div>
+      <p class="form-note">★ 4,5 · 279 Google reviews</p>
+    </form>
+  </div>
+</section>

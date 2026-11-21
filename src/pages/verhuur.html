@@ -1,0 +1,83 @@
+<!--meta {
+  "nav": "verhuur",
+  "title": "Fiets huren Utrecht centrum | Per dag, week of maand | GH Veilig Fietsen",
+  "titleEn": "Bike rental Utrecht city centre | Per day, week or month | GH Veilig Fietsen",
+  "desc": "Fiets huren in Utrecht centrum, 10 minuten van Centraal. Per dag, week of maand, met slot en verlichting. Ideaal voor toeristen, bezoekers en nieuwe studenten."
+}-->
+<section class="page-hero page-hero--photo">
+  <img class="page-hero__bg" src="assets/img/photos/GH-branded-bikes-rack.webp" alt="" width="1360" height="1020" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / <span data-en="Rental">Verhuur</span></p>
+    <h1 data-en="Rent a bike in Utrecht">Fiets huren in Utrecht</h1>
+    <p class="lead" data-en="Do Utrecht like a local. Rent for a day, a week or a month: ideal for visitors, tourists and new students waiting for their own bike.">Doe Utrecht zoals de Utrechters. Huur per dag, week of maand: ideaal voor bezoekers, toeristen en nieuwe studenten die nog geen eigen fiets hebben.</p>
+    <div class="chips">
+      <span class="chip chip--red" data-en="Lock &amp; lights included">Slot &amp; verlichting inbegrepen</span>
+      <span class="chip" data-en="10 min from Centraal">10 min van Centraal</span>
+      <span class="chip" data-en="English spoken">English spoken</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="plans-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><p class="eyebrow" data-en="Rates">Tarieven</p><h2 id="plans-title" data-en="Pick your period">Kies je periode</h2></div>
+      <p class="muted" data-en="Students get 10% off. Longer than a month? Ask us, or just buy a bike from €99.">Studenten krijgen 10% korting. Langer dan een maand? Vraag het ons, of koop gewoon een fiets vanaf €99.</p>
+    </div>
+    <div class="grid grid--3 js-rental reveal" style="padding-top:14px"></div>
+  </div>
+</section>
+
+<section class="section grey" aria-labelledby="incl-title">
+  <div class="wrap grid grid--2" style="gap:clamp(28px,5vw,64px)">
+    <div class="reveal">
+      <h2 id="incl-title" data-en="Included">Inbegrepen</h2>
+      <!-- TODO: CONFIRM with owner -->
+      <ul class="ticks">
+        <li data-en="A checked, comfortable city bike">Een nagekeken, comfortabele stadsfiets</li>
+        <li data-en="A good lock">Een goed slot</li>
+        <li data-en="Working front and rear lights">Werkende voor- en achterverlichting</li>
+        <li data-en="Help if something breaks: just come by">Hulp als er iets stuk gaat: gewoon langskomen</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <h2 data-en="What to bring">Wat neem je mee</h2>
+      <ul class="ticks">
+        <li data-en="A valid ID or passport">Een geldig ID-bewijs of paspoort</li>
+        <li data-en="A refundable deposit">Een borg, die je terugkrijgt</li>
+        <li data-en="Card or phone to pay">Pinpas, creditcard of telefoon om te betalen</li>
+        <li data-en="Student card for 10% off">Studentenkaart voor 10% korting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="huuraanvraag" aria-labelledby="rent-form-title">
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Reserve">Reserveren</p>
+      <h2 id="rent-form-title" data-en="Reserve a rental bike">Huurfiets reserveren</h2>
+      <p class="lead" data-en="Let us know when and how many. We'll confirm availability, usually within the hour during opening hours.">Laat weten wanneer en hoeveel. We bevestigen of er een fiets klaarstaat, meestal binnen een uur tijdens openingstijden.</p>
+      <p><span class="status status--light light js-status"></span> · ★ 4,5 <span class="muted">(279 reviews)</span></p>
+    </div>
+    <form class="form-box form js-form reveal" data-subject="Huuraanvraag via website" novalidate>
+      <div class="form__row">
+        <div class="field"><label for="h-name" data-en="Name">Naam</label><input id="h-name" name="naam" data-label="Naam" autocomplete="name" required></div>
+        <div class="field"><label for="h-phone" data-en="Phone">Telefoon</label><input id="h-phone" name="telefoon" data-label="Telefoon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="h-from" data-en="From">Vanaf</label><input id="h-from" name="vanaf" data-label="Vanaf" type="date" required></div>
+        <div class="field"><label for="h-period" data-en="Period">Periode</label>
+          <select id="h-period" name="periode" data-label="Periode"><option data-en="1 day">1 dag</option><option data-en="A few days">Paar dagen</option><option data-en="1 week">1 week</option><option data-en="1 month">1 maand</option><option data-en="Longer">Langer</option></select>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="field"><label for="h-count" data-en="Number of bikes">Aantal fietsen</label><input id="h-count" name="aantal" data-label="Aantal" type="number" min="1" max="20" value="1" required></div>
+        <div class="field"><label for="h-height"><span data-en="Your height">Lengte</span> <span class="opt" data-en="(for the right size)">(voor de juiste maat)</span></label><input id="h-height" name="lengte" data-label="Lengte" placeholder="bijv. 1,75 m" data-en-placeholder="e.g. 1.75 m"></div>
+      </div>
+      <div class="field"><label for="h-note"><span data-en="Anything else?">Nog iets?</span> <span class="opt" data-en="(optional)">(optioneel)</span></label><textarea id="h-note" name="opmerking" data-label="Opmerking" style="min-height:90px"></textarea></div>
+      <button class="btn btn--red btn--block" type="submit"><svg class="wheel" aria-hidden="true"><use href="#i-wheel"/></svg><svg class="btn__icon" aria-hidden="true"><use href="#i-key"/></svg><span data-en="Request rental bike">Vraag huurfiets aan</span></button>
+      <div class="form-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,130 @@
+<!--meta {
+  "nav": "fietsen",
+  "title": "Tweedehands fiets Utrecht vanaf €99 | Studentenfiets, omafiets, e-bike | GH Veilig Fietsen",
+  "titleEn": "Secondhand bikes Utrecht from €99 | Student, city & e-bikes | GH Veilig Fietsen",
+  "desc": "Tweedehands en nieuwe fietsen in Utrecht centrum vanaf €99. Stadsfiets, omafiets, opafiets, transportfiets, e-bike en kinderfiets. Veiligheidscheck, 10% studentenkorting. Reserveer via WhatsApp."
+}-->
+<section class="page-hero page-hero--photo">
+  <img class="page-hero__bg" src="assets/img/photos/GH-branded-bike.webp" alt="" width="1360" height="1020" fetchpriority="high" decoding="async">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / <span data-en="Bikes">Fietsen</span></p>
+    <h1 data-en="Bikes from €99">Fietsen vanaf €99</h1>
+    <p class="lead" data-en="Secondhand and new bikes, checked and ready to ride. See one you like? Reserve it on WhatsApp and pick it up today.">Tweedehands en nieuwe fietsen, nagekeken en klaar om te rijden. Zie je er een? Reserveer via WhatsApp en haal hem vandaag op.</p>
+    <div class="chips">
+      <span class="chip chip--red" data-en="10% student discount">10% studentenkorting</span>
+      <span class="chip" data-en="Safety checked">Veiligheidscheck</span>
+      <span class="chip" data-en="Delivery possible">Bezorgen mogelijk</span>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:40px">
+  <div class="wrap shop js-shop">
+    <div>
+      <button class="btn btn--block filters__toggle" type="button" aria-expanded="false" aria-controls="filters" data-en="Filter bikes">Filter fietsen</button>
+      <form class="filters js-filters" id="filters" aria-label="Filters">
+        <fieldset>
+          <legend data-en="Type">Soort fiets</legend>
+          <div class="pills">
+            <label class="pill"><input type="checkbox" name="type" value="stadsfiets"><span data-en="City bike">Stadsfiets</span></label>
+            <label class="pill"><input type="checkbox" name="type" value="omafiets"><span data-en="Granny bike">Omafiets</span></label>
+            <label class="pill"><input type="checkbox" name="type" value="opafiets"><span data-en="Granddad bike">Opafiets</span></label>
+            <label class="pill"><input type="checkbox" name="type" value="transportfiets"><span data-en="Transport">Transportfiets</span></label>
+            <label class="pill"><input type="checkbox" name="type" value="ebike"><span>E-bike</span></label>
+            <label class="pill"><input type="checkbox" name="type" value="kinderfiets"><span data-en="Kids">Kinderfiets</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-en="New or used">Nieuw of gebruikt</legend>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="state" value="all" checked><span data-en="All">Alles</span></label>
+            <label class="pill"><input type="radio" name="state" value="used"><span data-en="Secondhand">Tweedehands</span></label>
+            <label class="pill"><input type="radio" name="state" value="new"><span data-en="New">Nieuw</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend data-en="Frame size">Framemaat</legend>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="size" value="all" checked><span data-en="All">Alles</span></label>
+            <label class="pill"><input type="radio" name="size" value="s"><span>≤ 50</span></label>
+            <label class="pill"><input type="radio" name="size" value="m"><span>51–56</span></label>
+            <label class="pill"><input type="radio" name="size" value="l"><span>57–59</span></label>
+            <label class="pill"><input type="radio" name="size" value="xl"><span>60+</span></label>
+            <label class="pill"><input type="radio" name="size" value="kids"><span data-en="Kids">Kind</span></label>
+          </div>
+          <p class="small muted" style="margin:8px 0 0" data-en="Roughly: up to 1.65 m → 50–53, 1.65–1.80 m → 53–57, taller → 57+. We'll help you in the shop.">Grofweg: tot 1,65 m → 50–53, 1,65–1,80 m → 53–57, langer → 57+. In de winkel helpen we je.</p>
+        </fieldset>
+        <fieldset>
+          <legend data-en="Gears">Versnellingen</legend>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="gears" value="all" checked><span data-en="All">Alles</span></label>
+            <label class="pill"><input type="radio" name="gears" value="1"><span data-en="None">Geen</span></label>
+            <label class="pill"><input type="radio" name="gears" value="3"><span>3</span></label>
+            <label class="pill"><input type="radio" name="gears" value="7"><span>7+</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><label for="f-price" data-en="Max. price">Max. prijs</label></legend>
+          <input type="range" id="f-price" name="price" min="99" max="1200" step="25">
+          <div class="range-row"><span>€ 99</span><output class="js-price-out" for="f-price"></output></div>
+        </fieldset>
+        <button class="btn btn--ghost btn--sm btn--block" type="reset" data-en="Clear filters">Wis filters</button>
+      </form>
+    </div>
+    <div>
+      <div class="shop__bar">
+        <p class="shop__count js-shop-count" role="status" aria-live="polite" style="margin:0"></p>
+        <label><span class="sr-only" data-en="Sort">Sorteren</span>
+          <select id="f-sort">
+            <option value="asc" data-en="Price: low to high">Prijs: laag → hoog</option>
+            <option value="desc" data-en="Price: high to low">Prijs: hoog → laag</option>
+            <option value="new" data-en="New first">Nieuw eerst</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid grid--3 js-shop-grid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section grey" aria-labelledby="incl-title">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Included">Inbegrepen</p>
+      <h2 id="incl-title" data-en="Every secondhand bike comes with">Bij elke tweedehands fiets</h2>
+      <!-- TODO: CONFIRM with owner exactly what is included -->
+      <ul class="ticks">
+        <li data-en="A full safety check: brakes, tyres, chain and bolts">Volledige veiligheidscheck: remmen, banden, ketting en bouten</li>
+        <li data-en="Working front and rear lights">Werkende voor- en achterverlichting</li>
+        <li data-en="A lock, so you can ride straight out of the door">Een slot, zodat je direct de straat op kan</li>
+        <li data-en="Honest advice on size and condition">Eerlijk advies over maat en staat</li>
+      </ul>
+      <p class="muted" data-en="Something not right in the first few days? Come by and we'll take a look.">Iets niet goed in de eerste dagen? Kom langs, dan kijken we ernaar.</p>
+    </div>
+    <div class="grid grid--2 reveal" style="gap:16px">
+      <article class="card">
+        <svg class="card__icon" aria-hidden="true"><use href="#i-shop"/></svg>
+        <h3 data-en="Pick up in store">Ophalen in de winkel</h3>
+        <p data-en="Reserve via WhatsApp or phone and collect at Lange Jansstraat 26. Test ride first, of course.">Reserveer via WhatsApp of telefoon en haal op aan de Lange Jansstraat 26. Natuurlijk eerst een proefrit.</p>
+      </article>
+      <article class="card">
+        <svg class="card__icon" aria-hidden="true"><use href="#i-truck"/></svg>
+        <h3 data-en="Delivery">Bezorgen</h3>
+        <p data-en="Can't make it to the shop? We deliver in Utrecht. Ask about the options and costs.">Lukt langskomen niet? We bezorgen in Utrecht. Vraag naar de mogelijkheden en kosten.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="callout reveal">
+      <svg class="callout__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      <div>
+        <h3 data-en="Can't find what you're looking for?">Niet gevonden wat je zoekt?</h3>
+        <p data-en="New bikes come in every day. Tell us what you need and your budget.">Er komen elke dag fietsen binnen. App ons wat je zoekt en je budget.</p>
+      </div>
+      <a class="btn btn--white" href="https://wa.me/31685775914" target="_blank" rel="noopener" data-en="WhatsApp us">App ons</a>
+    </div>
+  </div>
+</section>

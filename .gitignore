@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Local agent / editor config
+.claude/
+.mcp.json
+
+# Dependencies (none today, just in case)
+node_modules/
