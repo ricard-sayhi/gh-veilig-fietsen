@@ -38,3 +38,12 @@ Translations: each Dutch element carries its English text in `data-en="…"`.
 - [ ] Forms: without `formEndpoint` they open WhatsApp with the message prefilled. For email delivery and photo uploads, set a Formspree/Basin URL.
 - [ ] The van shows a second address (Californiedreef 33, 3565 BJ Utrecht). Warehouse? Add it to the site if customers can visit
 - [ ] Address: the brief said "Lange Janss**s**traat"; the site uses the real street name, **Lange Jansstraat**
+
+## Automatic deploys (GitHub → Cloudflare Pages)
+`.github/workflows/deploy.yml` builds the site and deploys it on every push:
+- `main` → https://gh-veilig-fietsen.pages.dev (the link used in the outreach email)
+- any other branch → its own preview URL, e.g. `https://<branch-name>.gh-veilig-fietsen.pages.dev`
+
+While this is a sales preview the workflow adds `noindex` to every page (`NOINDEX: "true"` in the workflow).
+`preview-extras/` holds the robots/headers files for that, plus `email-preview.jpg`, the screenshot shown in the email.
+Repository secrets needed: `CLOUDFLARE_API_TOKEN` (Cloudflare Pages: Edit) and `CLOUDFLARE_ACCOUNT_ID`.

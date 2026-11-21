@@ -1,0 +1,65 @@
+name: Deploy to Cloudflare Pages
+
+# Every push builds the site from src/ and deploys it to the Cloudflare Pages
+# project "gh-veilig-fietsen".
+#   - Pushes to main update the live preview: https://gh-veilig-fietsen.pages.dev
+#   - Pushes to any other branch get their own preview URL
+#     (e.g. ci/cloudflare-deploy -> https://ci-cloudflare-deploy.gh-veilig-fietsen.pages.dev)
+#
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN (Pages: Edit) and CLOUDFLARE_ACCOUNT_ID.
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # While this is a sales preview, keep search engines away so it isn't
+  # mistaken for the shop's official site. Set to "false" once the owner
+  # has signed off and the site moves to its real domain.
+  NOINDEX: "true"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build (src/ -> dist/)
+        run: node build.mjs
+
+      - name: Prepare preview folder
+        run: |
+          rm -rf site
+          cp -R dist site
+          # Image used by the cold-outreach email (https://gh-veilig-fietsen.pages.dev/email-preview.jpg)
+          cp preview-extras/email-preview.jpg site/
+          if [ "$NOINDEX" = "true" ]; then
+            cp preview-extras/robots.txt preview-extras/_headers site/
+            for f in site/*.html; do
+              sed -i 's#<head>#<head>\n<meta name="robots" content="noindex, nofollow">#' "$f"
+            done
+          fi
+          echo "Pages with noindex: $(grep -l 'name=\"robots\"' site/*.html | wc -l)"
+
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: >
+          npx --yes wrangler@3 pages deploy site
+          --project-name gh-veilig-fietsen
+          --branch "$GITHUB_REF_NAME"
+          --commit-hash "$GITHUB_SHA"
+          --commit-dirty=true
