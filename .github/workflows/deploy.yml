@@ -1,4 +1,3 @@
-.github/workflows/deploy.yml
 name: Deploy to Cloudflare Pages
 
 # Every push builds the site from src/ and deploys it to the Cloudflare Pages
