@@ -5,7 +5,8 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
 
-const SITE = "https://www.ghveiligfietsen.nl"; // TODO: real domain
+// Public address, no trailing slash. CI sets SITE_URL to the preview host; the default is the future domain.
+const SITE = (process.env.SITE_URL || "https://www.ghveiligfietsen.nl").replace(/\/$/, ""); // TODO: real domain
 const VER = Date.now().toString(36); // cache-busting stamp for CSS/JS links
 const root = dirname(fileURLToPath(import.meta.url));
 const src = join(root, "src"), out = join(root, "dist");

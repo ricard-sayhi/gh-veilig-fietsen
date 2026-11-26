@@ -25,6 +25,9 @@ env:
   # mistaken for the shop's official site. Set to "false" once the owner
   # has signed off and the site moves to its real domain.
   NOINDEX: "true"
+  # Absolute address used in link previews (og:image, og:url, canonical).
+  # Change to the real domain once the site moves there.
+  SITE_URL: "https://gh-veilig-fietsen.pages.dev"
 
 jobs:
   deploy:
